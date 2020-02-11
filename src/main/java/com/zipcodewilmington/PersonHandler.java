@@ -29,7 +29,6 @@ public class PersonHandler {
                         "My last name is " + personArray[counter].getLastName() +  "\n";
             }
 
-
             counter++;
         }
             // begin loop
@@ -49,7 +48,20 @@ public class PersonHandler {
         // identify initial value
         // identify terminal condition
         // identify increment
-
+        for(int counter = 0; counter < personArray.length; counter++ ){
+            if(counter == 0){
+                result += "\nMy first name is " + personArray[counter].getFirstName() +  "\n" +
+                        "My last name is " + personArray[counter].getLastName() +  "\n";
+            }
+            else if(counter == personArray.length-1){
+                result += "My first name is " + personArray[counter].getFirstName() +  "\n" +
+                        "My last name is " + personArray[counter].getLastName();
+            }
+            else {
+                result += "My first name is " + personArray[counter].getFirstName() +  "\n" +
+                        "My last name is " + personArray[counter].getLastName() +  "\n";
+            }
+        }
         // use the above clauses to declare for-loop signature
             // begin loop
                 // use `counter` to identify the `current Person` in the array
