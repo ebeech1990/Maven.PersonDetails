@@ -78,6 +78,22 @@ public class PersonHandler {
         String result = "";
         // identify array's type
         // identify array's variable-name
+            int i = 0;
+            for(Person currentPerson : personArray){
+                if(i == 0){
+                    result += "\nMy first name is " + currentPerson.getFirstName() +  "\n" +
+                            "My last name is " + currentPerson.getLastName() +  "\n";
+                }
+                else if(i == personArray.length-1){
+                    result += "My first name is " + currentPerson.getFirstName() +  "\n" +
+                            "My last name is " + currentPerson.getLastName();
+                }
+                else {
+                    result += "My first name is " + currentPerson.getFirstName() +  "\n" +
+                            "My last name is " + currentPerson.getLastName() +  "\n";
+                }
+                i++;
+            }
 
         // use the above discoveries to declare for-each-loop signature
             // begin loop
