@@ -13,7 +13,25 @@ public class PersonHandler {
     public String whileLoop() {
         String result = "";
         // create a `counter`
+        int counter = 0;
         // while `counter` is less than length of array
+        while(counter < personArray.length){
+            if(counter == 0){
+                result += "\nMy first name is " + personArray[counter].getFirstName() +  "\n" +
+                        "My last name is " + personArray[counter].getLastName() +  "\n";
+            }
+            else if(counter == personArray.length-1){
+                result += "My first name is " + personArray[counter].getFirstName() +  "\n" +
+                        "My last name is " + personArray[counter].getLastName();
+            }
+            else {
+                result += "My first name is " + personArray[counter].getFirstName() +  "\n" +
+                        "My last name is " + personArray[counter].getLastName() +  "\n";
+            }
+
+
+            counter++;
+        }
             // begin loop
 
                 // use `counter` to identify the `current Person` in the array
